@@ -2,16 +2,76 @@ apiVersion: v1
 entries:
   n8n:
   - annotations:
-      artifacthub.io/changes: "- kind: added\n  description: \"add incressClassName definition to ingress PR#31 by swarnat\"\n  links:\n    - name: GitHub PR\n      url: https://github.com/8gears/n8n-helm-chart/pull/31\n- kind: added\n  description: \"Add lifecycle configuration for main deployment (#30) by tomaszkiewicz\"\n  links:\n    - name: GitHub PR\n      url: https://github.com/8gears/n8n-helm-chart/pull/30    \n- kind: changed\n  description: \"Updated App Version to 0.210.0\"\n- kind: added\n  description: \"Support for dedicated Workers and Webhooks Instances by Stefan Warnat aka swarnat\"\n  links:\n    - name: GitHub PR\n      url: https://github.com/8gears/n8n-helm-chart/pull/24\n    - name: \"Stefan Warnat aka @swarnat\"\n      url: https://github.com/swarnat\n"
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Fixed secret volume mnt for existing secret"
+          links:
+            - name: "GitHub PR"
+                url: https://github.com/8gears/n8n-helm-chart/pull/51
+        - kind: changed
+          description: "Updated App Version to 1.5.1"
+        - kind: added
+          description: "Added support for specifying initContainers and probes"
+        - kind: changed
+          description: "Updated App Version to 0.236.3"
+        - kind: added
+          description: "Support Kubernetes 1.25"
+          links:
+            - name: "GitHub PR"
+              url: https://github.com/8gears/n8n-helm-chart/pull/46
     apiVersion: v2
-    appVersion: 0.217.1
-    created: "2023-04-19T07:50:38.708552+02:00"
+    appVersion: 1.5.1
+    created: "2023-09-08T20:50:54.388872+02:00"
     dependencies:
     - condition: redis.enabled
       name: redis
       repository: https://charts.bitnami.com/bitnami
       version: 17.2.0
-    description: A Kubernetes Helm chart for n8n a free and open fair-code licensed node based Workflow Automation Tool. Easily automate tasks across different services.
+    description: A Kubernetes Helm chart for n8n a free and open fair-code licensed
+      node based Workflow Automation Tool. Easily automate tasks across different
+      services.
+    digest: b56fdfcfa0bba4b2ca703166ac8ebf5e5db76849e0ac73477d3e092995eae483
+    home: https://github.com/8gears/n8n-helm-chart
+    icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
+    keywords:
+    - Workflow Automation
+    - Workflow
+    - iPaaS
+    - integration-framework
+    - low-code-plattform
+    - low-code
+    maintainers:
+    - name: Vadim Bauer
+    name: n8n
+    sources:
+    - https://github.com/n8n-io/n8n
+    - https://n8n.io/
+    type: application
+    urls:
+    - https://elium.github.io/n8n-helm-chart/n8n-0.12.1.tgz
+    version: 0.12.1
+  - annotations:
+      artifacthub.io/changes: "- kind: added\n  description: \"add incressClassName
+        definition to ingress PR#31 by swarnat\"\n  links:\n    - name: GitHub PR\n
+        \     url: https://github.com/8gears/n8n-helm-chart/pull/31\n- kind: added\n
+        \ description: \"Add lifecycle configuration for main deployment (#30) by
+        tomaszkiewicz\"\n  links:\n    - name: GitHub PR\n      url: https://github.com/8gears/n8n-helm-chart/pull/30
+        \   \n- kind: changed\n  description: \"Updated App Version to 0.210.0\"\n-
+        kind: added\n  description: \"Support for dedicated Workers and Webhooks Instances
+        by Stefan Warnat aka swarnat\"\n  links:\n    - name: GitHub PR\n      url:
+        https://github.com/8gears/n8n-helm-chart/pull/24\n    - name: \"Stefan Warnat
+        aka @swarnat\"\n      url: https://github.com/swarnat\n"
+    apiVersion: v2
+    appVersion: 0.217.1
+    created: "2023-09-08T20:50:54.378343+02:00"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.2.0
+    description: A Kubernetes Helm chart for n8n a free and open fair-code licensed
+      node based Workflow Automation Tool. Easily automate tasks across different
+      services.
     digest: d3524730e240157c79b4ed17b650b371f54d4c4918db8fb9d3f79e791ec0bdf9
     home: https://github.com/8gears/n8n-helm-chart
     icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
@@ -37,14 +97,16 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2023-04-19T07:50:38.71345+02:00"
+    created: "2023-09-08T20:50:54.395122+02:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
       tags:
       - bitnami-common
       version: 2.x.x
-    description: Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
     digest: aafec5258f566caddd524e44c4a97eccebe70fdc548ce7f298bc79bafd243a3f
     home: https://github.com/bitnami/charts/tree/master/bitnami/redis
     icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
@@ -63,4 +125,4 @@ entries:
     urls:
     - https://elium.github.io/n8n-helm-chart/charts/redis-17.2.0.tgz
     version: 17.2.0
-generated: "2023-04-19T07:50:38.69939+02:00"
+generated: "2023-09-08T20:50:54.370319+02:00"
