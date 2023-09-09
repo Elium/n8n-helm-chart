@@ -1,19 +1,20 @@
-{{- if .Values.metrics.enabled }}
+{{- if and .Values.scaling.enabled .Values.metrics.enabled }}
 apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
+kind: PodMonitor
 metadata:
   namespace: {{ .Values.metrics.namespace | default "monitoring" }}
   name: {{ include "n8n.fullname" . }}
   labels:
     {{- include "n8n.labels" . | nindent 4 }}
 spec:
-  endpoints:
-    - path: /metrics
-      port: http
+  podMetricsEndpoints:
+    - port: http
+      path: /metrics
   namespaceSelector:
     matchNames:
       - {{ .Release.Namespace }}
   selector:
     matchLabels:
       {{- include "n8n.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/type: worker
 {{- end }}
