@@ -39,6 +39,9 @@ helm.sh/chart: {{ include "n8n.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
+{{- if .Values.metrics.enabled }}
+release: {{ .Values.metrics.namespace }}
+{{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
