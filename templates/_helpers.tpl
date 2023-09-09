@@ -139,3 +139,15 @@ Create the name of the service account to use
             claimName: {{ include "n8n.fullname" . }}
 {{- end }}
 {{- end }}
+
+{{/*
+Common MountPath
+*/}}
+{{- define "n8n.mountPath" -}}
+{{ $semanticVersion := ternary .Values.image .Chart.AppVersion (regexMatch "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$" .Values.image.tag) -}}
+{{- if semverCompare ">=1.0" $semanticVersion }}
+{{- print "/home/node/.n8n" -}}
+{{- else }}
+{{- print "/root/.n8n" -}}
+{{- end }}
+{{- end }}
