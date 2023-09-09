@@ -21,7 +21,7 @@ entries:
               url: https://github.com/8gears/n8n-helm-chart/pull/46
     apiVersion: v2
     appVersion: 1.5.1
-    created: "2023-09-09T09:54:59.734799+02:00"
+    created: "2023-09-09T23:43:13.773941+02:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -30,7 +30,7 @@ entries:
     description: A Kubernetes Helm chart for n8n a free and open fair-code licensed
       node based Workflow Automation Tool. Easily automate tasks across different
       services.
-    digest: 7887b83c3579802af25f813331d955664f5174c792c919d46dddb410224ba1c7
+    digest: a217e5b551e370fcbd2448da454a5c40d8d74092b5e47d4c83756037bec5769f
     home: https://github.com/8gears/n8n-helm-chart
     icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
     keywords:
@@ -63,7 +63,7 @@ entries:
         aka @swarnat\"\n      url: https://github.com/swarnat\n"
     apiVersion: v2
     appVersion: 0.217.1
-    created: "2023-09-09T09:54:59.710178+02:00"
+    created: "2023-09-09T23:43:13.743272+02:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -92,4 +92,4 @@ entries:
     urls:
     - https://elium.github.io/n8n-helm-chart/n8n-0.10.0.tgz
     version: 0.10.0
-generated: "2023-09-09T09:54:59.699898+02:00"
+generated: "2023-09-09T23:43:13.735827+02:00"

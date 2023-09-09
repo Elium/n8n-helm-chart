@@ -96,6 +96,10 @@ Selector labels
 - name: "N8N_DISABLE_PRODUCTION_MAIN_PROCESS"
   value: "true"
 {{ end }}
+{{- if .Values.metrics.enabled }}
+- name: "N8N_METRICS"
+  value: "true"
+{{ end }}
 {{- end }}
 
 {{/*

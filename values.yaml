@@ -324,3 +324,7 @@ redis:
       enabled: true
       existingClaim: ""
       size: 2Gi
+
+metrics:
+  enabled: false
+  namespace: infra-prometheus
